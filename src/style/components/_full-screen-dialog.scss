@@ -1,0 +1,31 @@
+@use '../abstracts/_variable' as *;
+@use '../abstracts/_mixins' as *;
+
+.dialog-wrap{
+    position: fixed;
+    color: red;
+    top: 0;
+    left: 100%;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0,255,255,.5);
+    z-index: 10;
+    transition: left ease-in-out 0.2s;
+    &.active{
+        left: 0;
+    }
+    header{
+        .inner{
+            @include flex(space-between,center);
+            .prefix{
+                @include flex(flex-start,center);
+                h2{
+                    font-size: toRem(20);
+                }
+            }
+            .suffix{
+
+            }
+        }
+    }
+}

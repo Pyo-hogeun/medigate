@@ -1,0 +1,19 @@
+@use '../abstracts/_variable' as *;
+@use '../abstracts/_mixins' as *;
+
+header.sub-header {
+    background-color: #207FFD;
+    .inner {
+        @include flex(space-between,center);
+        height: toRem(60);
+        padding:0 toRem(20);
+    }
+    .header-controls {
+        @include flex(center,center);
+    }
+    h1 {
+        color: $color-white;
+        font-size: toRem(18);
+        font-weight:$font-bold;
+    }
+}

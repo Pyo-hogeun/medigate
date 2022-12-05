@@ -1,0 +1,32 @@
+
+@use '../abstracts/_variable' as *;
+@use '../abstracts/_mixins' as *;
+
+.other-service {
+    h4 {
+        margin-bottom:toRem(8);
+    }
+    ul {
+        @include flex(flex-start,center);
+        flex-wrap: wrap;
+        gap: toRem(10);
+        margin-bottom:toRem(22);
+        li {
+            flex:1 30%;
+            a {
+                @include flex(space-between,center);
+                width:100%;
+                height: toRem(37);
+                padding:toRem(10);
+                font-size: toRem(14);
+                border:1px solid #E6E5EA;
+                background-color: #fff;
+                letter-spacing: -0.05em;
+            }
+            .medi {
+                width:toRem(5);
+                height:toRem(8);
+            }
+        }
+    }
+}

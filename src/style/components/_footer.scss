@@ -1,0 +1,58 @@
+@use '../abstracts/_variable' as *;
+@use '../abstracts/_mixins' as *;
+
+footer {
+    position: relative;
+    padding:toRem(40) toRem(16);
+    background-color: $color-bg-footer;
+    text-align: center;
+    .footer-menu {
+        ul {
+            @include flex(center,center);
+            flex-wrap: wrap;
+            width: toRem(300);
+            margin:0 auto;
+            li {
+                position:relative;
+                padding:0 toRem(9);
+                &:after {
+                    content:"";
+                    display:block;
+                    position:absolute;
+                    left:0;
+                    @include yCenter;
+                    width:1px;
+                    height: toRem(8);
+                    background-color: $color-gray-gray-03;
+                }
+                &:first-child:after,&:nth-child(5):after {display: none;}
+                a {
+                    font-size: toRem(12);
+                    color:#787878;
+                }
+            }
+        }
+    }
+    .footer-link {
+        padding:toRem(8) 0 toRem(12);
+        .btn-text {
+            @include inlineflex(center,center);
+            .medi {
+                width: toRem(4);
+                height: toRem(5);
+                margin-left:toRem(4);
+            }
+        }
+    }
+    address {
+        font-size: toRem(12);
+        color:#585858;
+        font-style: normal;
+        font-weight: $font-light;
+    }
+    .btn-top {
+        position:absolute;
+        top:toRem(-16);
+        right:toRem(20);
+    }
+}

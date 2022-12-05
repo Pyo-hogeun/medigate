@@ -1,0 +1,56 @@
+@use '../abstracts/_variable' as *;
+@use '../abstracts/_mixins' as *;
+
+.tab-menu {
+    margin-bottom:toRem(20);
+    ul {
+        @include flex(space-between,flex-end);
+        white-space: nowrap;
+        li {
+            width: auto;
+            button {
+                font-size: toRem(18);
+                color:#B8B8B8;
+                font-weight: $font-bold;
+            }
+            &.active {
+                &:before {
+                    content:"";
+                    display:block;
+                    width:toRem(26);
+                    height: toRem(6);
+                    margin-bottom:toRem(6);
+                    background: url(../images/icons/point-dot.svg) no-repeat 0 / auto 100%;
+                }
+                &.dot2:before {
+                    width: toRem(16);
+                }
+                button {
+                    color:$color-secondary-dark;
+                }
+            }
+        }
+    }
+    &.line {
+        margin-bottom:0;
+        ul {
+            align-items: flex-start;
+            li {
+                &.active {
+                    &:before {
+                        display: none;
+                    }
+                    &:after {
+                        content:"";
+                        display: block;
+                        height: toRem(3);
+                        background-color: #173979;
+                    }
+                }
+                &+li {
+                    margin-left:toRem(18);
+                }
+            }
+        }
+    }
+}

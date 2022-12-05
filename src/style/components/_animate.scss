@@ -1,0 +1,47 @@
+@use '../abstracts/_variable' as *;
+@use '../abstracts/_mixins' as *;
+@keyframes popShake {
+	0% { transform:scale(0);}
+	9% { transform:scale(1);}
+	9.78571% { transform:rotate(-5deg);}
+	10.57143% { transform:rotate(5deg);}
+	11.35714% { transform:rotate(0deg);}
+	12.14286% { transform:rotate(-5deg);}
+	13.92857% { transform:rotate(0deg);}
+	14.78571% { transform:rotate(-5deg);}
+	15.57143% { transform:rotate(5deg);}
+	16.35714% { transform:rotate(0deg);}
+	17.14286% { transform:rotate(-5deg);}
+	18.92857% { transform:rotate(0deg);}
+	95% { transform:scale(1);}
+	100% { transform:scale(0);}
+}
+
+@keyframes scale {
+	0% { opacity:0;transform:scale(0);}
+	100% { opacity:1;transform:scale(1);}
+}
+
+@keyframes oacityEff {
+	0% { opacity:1;}
+	20% { opacity:.4;}
+	40% { opacity:.8;}
+	60% { opacity:.2;}
+	70% { opacity:.7;}
+	80% { opacity:.5;}
+	100% { opacity:1;}
+}
+
+@keyframes scale {
+	0% { opacity:0;transform:scale(0);}
+	100% { opacity:1;transform:scale(1);}
+}
+
+
+@keyframes float {
+	0% {transform:translateY(0); }
+	50% { transform:translateY(toVw(2));}
+	100% { transform:translateY(0);}
+}
+
+

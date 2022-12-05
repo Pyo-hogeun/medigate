@@ -1,0 +1,74 @@
+@use '../abstracts/_variable' as *;
+@use '../abstracts/_mixins' as *;
+
+.btn {
+    position: relative;
+    @include flex(center, center);
+    gap: toRem(10);
+    height: toRem(48);
+    border-radius: toRem(4);
+    color: $color-white;
+    background-color: $color-primary;
+    padding: 0 toRem(24);
+    transition: all .1s;
+    
+    &:disabled { pointer-events: none; }
+    &:active .shade { opacity: 1; }
+}
+
+.btn-icon {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: toRem(30);
+    height: toRem(30);
+    transition: all 0.2s;
+    color: #000;
+    line-height: 0;
+
+    &.btn-more {
+        width: toRem(19);
+        height: toRem(19);
+    }
+}
+
+.btn-srch {
+    i {
+        width: toRem(20);
+        height: toRem(20);
+    }
+}
+
+.btn-menu {
+    i {
+        width: toRem(16);
+        height: toRem(14);
+    }
+}
+
+.btn-text {
+    height: toRem(22);
+    padding: 0 toRem(8);
+    font-size: toRem(12);
+    color: #666;
+    line-height: 0;
+}
+.btn-round {
+    border-radius: toRem(14);
+}
+.btn-white {
+    background-color: $color-white;
+}
+
+.btn-top {
+    width:toRem(39);
+    height:toRem(39);
+    background-color: #fff;
+    border: 1px solid #ECEBEF;
+    border-radius:50%;
+    .medi {
+        width:toRem(13);
+        height:toRem(17);
+    }
+}

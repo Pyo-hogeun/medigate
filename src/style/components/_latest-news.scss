@@ -1,0 +1,59 @@
+@use '../abstracts/_variable' as *;
+@use '../abstracts/_mixins' as *;
+
+.latest-news {
+    h2 {
+        @include flex(flex-start,center);
+        .logo {
+            width:toRem(108);
+            height: toRem(14);
+        }
+        .badge-news {
+            display: block;
+            width:toRem(48);
+            height: toRem(16);
+            margin-left:toRem(5);
+            background: url(../images/home/badge_news.svg) no-repeat 0 100% / 100% auto;
+            text-indent: -9999em;
+        }
+    }
+    .latest-news-header {
+        @include flex(center, flex-start);
+        .img-area {
+            overflow: hidden;
+            width:toRem(120);
+            height:toRem(120);
+            margin-right:toRem(16);
+            margin-bottom:toRem(3);
+            border-radius: toRem(8);
+        }
+        .txt-area {
+            flex:1;
+            
+            h3 {
+                @include ellipsis(2);
+                color: $color-dark;
+                margin-bottom:toRem(10);
+            }
+            p {
+                @include ellipsis(3);
+                font-size: toRem(14);
+                color: $color-gray;
+                line-height: 1.28;
+            }
+        }
+    }
+    .latest-news-cont {
+        li {
+            padding: toRem(10) 0;
+            border-bottom: 1px solid #F7F7F7;
+            &:last-child {border-bottom:0;}
+            a {
+                display: block;
+                @include ellipsis(1);
+                font-size: toRem(14);
+                color: $color-gray;
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+@use '../abstracts/_variable' as *;
+@use '../abstracts/_mixins' as *;
+
+.logo {
+    display: block;
+    width:toRem(128);
+    background: url('/images/logo.svg') no-repeat center / contain;
+    text-indent:-9999em;
+}
+header {
+    background-color: $color-white;
+    .inner {
+        @include flex(space-between,center);
+        height: toRem(60);
+        padding:0 toRem(20);
+    }
+    .header-controls {
+        @include flex(center,center);
+        transform: translateX(toRem(10));
+        button {
+            &+button {
+                margin-left:toRem(6);
+            }
+        }
+    }
+}
+.medi-arrow-back{
+    background: url('/images/icons/arrow-back.svg') no-repeat center / contain;
+    &:before{
+    }
+}

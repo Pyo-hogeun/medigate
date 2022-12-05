@@ -1,0 +1,44 @@
+@use '../abstracts/_variable' as *;
+@use '../abstracts/_mixins' as *;
+
+.badge {
+    @include inlineflex(center, center);
+    min-width: toRem(33);
+    height: toRem(20);
+    padding: 0 toRem(6);
+    font-size: toRem(12);
+    color:#fff;
+    font-weight: $font-semi-bold;
+    background: #165BB5;
+    border-radius: toRem(6);
+    line-height: 0;
+    &.disabled {
+        background-color: #CFD0D0;
+    }
+    &.darkgray {
+        background-color: #636363;
+    }
+    &.border {
+        color:#FFAE7B;
+        border:1px solid #FFAE7B;
+        background-color: #FFE7D2;
+        border-radius: toRem(2);
+        &.green {
+            color:#349A26;
+            border:1px solid #8FCC41;
+            background-color: #E7F5D3;
+        }
+    }
+    &.round {
+        color:#0F3979;
+        border:1px solid #07356B;
+        background-color: #636363;
+        border-radius: toRem(10);
+    }
+    &.big {
+        font-size: toRem(13);
+        color:#4A4545;
+        background-color: #F4F5F7;
+        border-radius: toRem(10);
+    }
+}

@@ -1,0 +1,46 @@
+@use '../abstracts/_variable' as *;
+@use '../abstracts/_mixins' as *;
+
+.main-menu {
+    overflow: hidden;
+    overflow-x: overlay;
+    padding:0 toRem(11);
+    background: linear-gradient(91.78deg, #13A9F8 7.18%, #1F64F4 70.43%, #2449F2 94.55%);
+    ul {
+        @include flex(flex-start,center);
+        width:100%;
+        height:toRem(50);
+        white-space: nowrap;
+        li {
+            height: 100%;
+            padding:0 toRem(9);
+            a {
+                @include flex(center,center);
+                position: relative;
+                height: 100%;
+                padding: 0;
+                color: #fff;
+                font-size: toRem(16);
+            }
+            &.current {
+                a {
+                    font-weight: $font-bold;
+                    &:after {
+                        content:"";
+                        display:block;
+                        position:absolute;
+                        bottom:0;
+                        left:0;
+                        width: 100%;
+                        height:toRem(3);
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.main-menu::-webkit-scrollbar {
+    height:10px;
+}

@@ -1,0 +1,27 @@
+@use '../abstracts/_variable' as *;
+@use '../abstracts/_mixins' as *;
+
+.tabmenu-swiper {
+    position: relative;
+    .swiper {
+        overflow: visible;
+    }
+
+    .tab-cont {
+        padding:0 0 toRem(20);
+    }
+
+    .swiper-pagination {
+        position: static;
+        .swiper-pagination-bullet {
+            width:toRem(6);
+            height:toRem(6);
+            border-radius: toRem(3);
+            background-color: #D5D5D5;
+            &.swiper-pagination-bullet-active {
+                width: toRem(16);
+                background-color: #0F3979;
+            }
+        }
+    }
+}

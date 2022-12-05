@@ -1,0 +1,26 @@
+@use './style/base/_reset' as *;
+// @use './style/base/_typography' as *;
+@use './style/function/_function' as *;
+@use './style/base/_common' as *;
+
+@use './style/components/_header' as *;
+// @use 'components/_sub-header' as *;
+@use './style/components/_icons' as *;
+@use './style/components/_buttons' as *;
+@use './style/components/_lnb' as *;
+@use './style/components/_full-screen-dialog' as *;
+
+// @use 'components/_ad-banner' as *;
+// @use 'components/_main-swiper-tab' as *;
+// @use 'components/_card-item' as *;
+// @use 'components/_card-list' as *;
+// @use 'components/_swiper' as *;
+// @use 'components/_badge' as *;
+// @use 'components/_latest-news' as *;
+// @use 'components/_card-img' as *;
+// @use 'components/_other-service' as *;
+
+// @use 'components/_search-box' as *;
+
+
+// @use 'components/_footer' as *;

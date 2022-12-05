@@ -1,0 +1,64 @@
+@use '../abstracts/_variable' as *;
+@use '../abstracts/_mixins' as *;
+
+.search-box-wrap {
+    padding:toRem(20) toRem(20) toRem(25);
+    background-color: $color-secondary-light;
+    .search-box {
+        position: relative;
+        height: toRem(48);
+        background-color: #fff;
+        border-radius: toRem(24);
+        margin-bottom:toRem(20);
+        filter: drop-shadow(0px 1px 3px rgba(0, 78, 168, 0.161));
+        .search-input {
+            width:100%;
+            height:100%;
+            padding:0 toRem(54) 0 toRem(18);
+        }
+        button {
+            position:absolute;
+            @include yCenter;
+            right:toRem(18);
+            line-height: 0;
+            .medi {
+                width:toRem(20);
+                height: toRem(20);
+            }
+            &.clear {
+                display: none;
+                .medi {
+                    width:toRem(30);
+                    height: toRem(30);
+                }
+            }
+        }
+    }
+    &.has-value.on {
+        .search-box {
+            button{
+                display:none;
+                &.clear {
+                    display:block;
+                }
+            }
+        }
+    }
+    .search-items {
+        @include inlineflex(flex-start,center);
+        flex-wrap: wrap;
+        margin-bottom:toRem(-10);
+        span {
+            @include flex(center,center);
+            height: toRem(33);
+            padding:0 toRem(16);
+            margin:0 toRem(10) toRem(10) 0;
+            background-color: $color-primary-light;
+            font-size: toRem(14);
+            color: #fff;
+            border-radius: toRem(17);
+        }
+    }
+}
+
+/* Group */

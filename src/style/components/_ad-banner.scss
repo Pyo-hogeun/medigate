@@ -1,0 +1,12 @@
+@use '../abstracts/_variable' as *;
+@use '../abstracts/_mixins' as *;
+
+.ad-banner {
+    line-height: 0;
+    a {
+        display: block;
+        img {
+            width:100%;
+        }
+    }
+}

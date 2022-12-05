@@ -1,0 +1,29 @@
+.medi {
+    display:inline-block;
+    width: 2rem;
+    height: 2rem;
+    &:before {
+        content:"";
+        display:block;
+        width:100%;height:100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+}
+//아이콘 파일명 추가
+$icons:(arrow-back,arrow-left,arrow-right,bookmark,camera,caret-right,clear,close,coment,fullmenu,graph,heart,like,logo,more-horizontal,more-vertical,notice,paper,plus,search,square-plus,text,top,view);
+/* item icon */
+@each $iconName in $icons {
+    .medi-#{$iconName} {
+        &:before {
+            background-image:url('/images/icons/#{$iconName}.svg');
+        }
+    }
+    // .medi-#{$iconName}:active:before {
+    //     background-image:url('/images/icons/#{$iconName}-press.svg');
+    // }
+    // [disabled] .medi-#{$iconName}:before {
+    //     background-image:url('/images/icons/#{$iconName}-disable.svg');
+    // }
+}

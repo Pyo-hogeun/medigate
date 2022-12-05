@@ -1,0 +1,73 @@
+@use '../style/base/_common';
+@use '../style/abstracts/_variable' as var;
+@use '../style/abstracts/_mixins' as mix;
+
+.main {
+    background-color: var.$color-gray-gray-02;
+    header {
+        position: sticky;
+        top:toRem(-60);
+        z-index: 10;
+    }
+    section:not(.ad-banner-wrap) {
+        overflow: hidden;
+        padding: toRem(30) toRem(20) toRem(20);
+        .title-area {
+            @include mix.flex(space-between,center);
+            margin-bottom:toRem(20);
+            h2 {
+                color:var.$color-secondary-dark;
+            }
+        }
+
+        &.recommend-rental {
+            .title-area {
+                align-items: center;
+            }
+            .tab-cont:not(.custom) {
+                display: none;
+            }
+        }
+      
+        &.main-card-section {
+            margin-bottom:toRem(16);
+            .tab-cont:not(.web-symposium) {
+                display: none;
+            }
+            .medical-info {
+                .txt-area {
+                    h3 {
+                        @include mix.ellipsis(1);
+                    }
+                }
+            }
+            .survey {
+                .txt-area {
+                    padding: toRem(16);
+                    h3 {
+                        @include mix.ellipsis(1);
+                        @include mix.flex(flex-start,center);
+                        height: auto;
+                        .badge {
+                            margin-right:toRem(6);
+                        }
+                    }
+                    li {
+                        @include mix.flex(flex-start,center);
+                        span {
+                            @include mix.flex(flex-start,center);
+                            & + span {
+                                &:before {
+                                    content:"";display:block;
+                                    width:1px;height:toRem(10);
+                                    margin: 0 toRem(6);
+                                    background-color: #D9D9D9;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

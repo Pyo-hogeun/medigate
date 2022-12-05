@@ -1,0 +1,47 @@
+@use '../abstracts/_variable' as *;
+@use '../abstracts/_mixins' as *;
+
+.swiper {
+    overflow: visible;
+    .swiper-slide {
+        width: auto;
+    }
+    .swiper-pagination {
+        position: static;
+        margin-top: toRem(16);
+        line-height: 0;
+        .swiper-pagination-bullet {
+            opacity: 1;
+            width:toRem(6);
+            height:toRem(6);
+            border-radius: toRem(3);
+            background-color: #D5D5D5;
+            &.swiper-pagination-bullet-active {
+                width: toRem(16);
+                background-color: #0F3979;
+            }
+        }
+    }
+
+    &.swiper-grid {
+        height: toRem(344);
+        .swiper-wrapper {
+            margin-bottom:toRem(-24);
+        }
+        .swiper-slide {
+            width: toRem(311);
+            height: toRem(154);
+            margin-bottom:toRem(12);
+            .card-item {height: 100%;}
+        }
+        &.row3 {
+            .swiper-slide {
+                height: toRem(100);
+            }
+            
+        }
+    }
+}
+
+.streamer-list .list {width:40.125rem;height:71rem; margin:0 auto;padding-left:.625rem;}
+.streamer-list .list li {width:19.0625rem !important;margin-top:0 !important;margin-bottom:10px;background-color:#ebebeb;}
